@@ -1,10 +1,31 @@
+body {
+       text-align: center;
+}
+
 #button1 {
+
     /*Border raidus makes it a circle, height and width change the scale of said circle, margin-left and margin-top change the location of the button on the screen, backgorund color changes color of the button*/
     border-radius: 50%;
     height: 200px;
     width: 200px;
     background-color:red;
-    margin-left: 860px;
-    margin-top: 300px;
     box-shadow: 0px 15px 0px 0px grey;
+    /* position: absolute; */
+    align-items: center;
+    margin-top: 165px;
+    animation: button s infinite;
+
+}
+
+#text {
+    text-align: center;
+}
+
+@keyframes button {
+    from {
+        transform: rotate (0deg) translate(105px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(105px) rotate(-360deg);
+    }
 }
