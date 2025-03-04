@@ -1,5 +1,18 @@
-body {
+.body {
        text-align: center;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 #button1 {
@@ -10,22 +23,24 @@ body {
     width: 200px;
     background-color:red;
     box-shadow: 0px 15px 0px 0px grey;
-    /* position: absolute; */
     align-items: center;
-    margin-top: 165px;
-    animation: button s infinite;
+    position: absolute;
+    margin-top: -105px;
 
 }
-
 #text {
     text-align: center;
 }
 
-@keyframes button {
+.rotate {
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
     from {
-        transform: rotate (0deg) translate(105px) rotate(0deg);
+        transform: rotate(0deg)  translate(350px)  rotate(0deg);
     }
     to {
-        transform: rotate(360deg) translate(105px) rotate(-360deg);
+        transform: rotate(360deg)  translate(350px) rotate(-360deg);
     }
 }

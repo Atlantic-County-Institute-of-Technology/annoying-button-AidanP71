@@ -76,5 +76,10 @@ function annoy() {
     }
     else if (clicks == 23) {
         text.innerHTML = "Fine, try and click me now."
+        button1.classList.add("rotate");
+    }
+    else if (clicks == 24) {
+        text.innerHTML = "Ok! How about now?"
+        button1.classList.remove("rotate");
     }
 }
