@@ -1,6 +1,8 @@
 let text = document.getElementById("text");
 let button1 = document.getElementById("button1");
-
+const container = document.getElementById ("container")
+let button2 = null;
+let button3 = null;
 let clicks = 0;
 
 button1.addEventListener("click", annoy);
@@ -80,6 +82,25 @@ function annoy() {
     }
     else if (clicks == 24) {
         text.innerHTML = "Ok! How about now?"
-        button1.classList.remove("rotate");
+        button1.classList.remove("rotate"); 
+        button2 = document.createElement("button");
+        button2.innerHTML = "Press Me!";
+        button2.classList.add("button1");
+        button2.classList.add("button2");
+        container.appendChild(button2);
+
+        button3 = document.createElement("button");
+        button3.innerHTML = "NO Press Me!";
+        button3.classList.add("button2");
+        button3.classList.add("button3");
+        container.appendChild(button3);
     }
+    else if (clicks == 25) {
+        text.innerHTML = "Where did I go?"
+        button2.classList.remove("button2");
+        button3.classList.remove("button3");
+        container.appendChild(button2);
+        button3.remove()
+    }
+
 }
