@@ -3,11 +3,14 @@ let button1 = document.getElementById("button1");
 const container = document.getElementById ("container")
 let button2 = null;
 let button3 = null;
+
 let clicks = 0;
 
 button1.addEventListener("click", annoy);
 
 function annoy() {
+    let quack = new Audio('assets/quack.mp3');
+    quack.play()
     clicks++;
     if(clicks == 1 ) {
         text.innerHTML = "Hey! Stop That!";
@@ -96,11 +99,27 @@ function annoy() {
         container.appendChild(button3);
     }
     else if (clicks == 25) {
-        text.innerHTML = "Where did I go?"
+        text.innerHTML = "Try and get me now."
         button2.classList.remove("button2");
         button3.classList.remove("button3");
         container.appendChild(button2);
         button3.remove()
+        button1.classList.add("back-and-forth");
     }
-
+    else if (clicks == 26) {
+        text.innerHTML = "Fine"
+        button1.classList.remove("back-and-forth")
+    }
+    else if (clicks == 27) {
+        text.innerHTML = "You win"
+    }
+    else if (clicks == 28) {
+        text.innerHTML = "HA!"
+    }
+    else if (clicks == 29) {
+        text.innerHTML = "You acutally thought"
+    }
+    else if (clicks == 30) {
+        text.innerHTML = "The game is NEVER over"
+    }
 }

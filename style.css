@@ -13,7 +13,6 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    border: 2px solid red;
 }
 
 #button1 {
@@ -26,7 +25,7 @@
     box-shadow: 0px 15px 0px 0px grey;
     align-items: center;
     position: absolute;
-    margin-top: -105px;
+    margin-top: -105px; 
 }
 
 .button2 {
@@ -71,10 +70,16 @@
     }
 }
 
-/*@keyframes back-and-forth {
-    0% 5% 95% 0%
+@keyframes back-and-forth {
+    0%{ transform: translateX(0px);}
+    25%{ transform: translateX(-400px);}
+    75% {transform: translateX(400px)}
+    100% {transform: translateX(0px)
+    
+    }
+
 }
 
 .back-and-forth {
-    animation: back and forth 1.5s infinite;
-} */
+    animation: back-and-forth .5s infinite linear;
+}
