@@ -121,5 +121,6 @@ function annoy() {
     }
     else if (clicks == 30) {
         text.innerHTML = "The game is NEVER over"
+        clicks = 0
     }
 }
