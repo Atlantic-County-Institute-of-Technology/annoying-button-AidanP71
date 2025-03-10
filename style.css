@@ -27,7 +27,7 @@
     position: absolute;
     margin-top: -105px; 
 }
-
+/*creates a second button*/
 .button2 {
     background-color: blue;
     height: 200px;
@@ -39,7 +39,7 @@
     font-size: 30px;
     color: snow;
 }
-
+/*creates a third button*/
 .button3 {
     background-color: green;
     height: 200px;
@@ -60,7 +60,7 @@
 .rotate {
     animation: rotate 1.5s linear infinite;
 }
-
+/*button will move in a circle*/
 @keyframes rotate {
     from {
         transform: rotate(0deg)  translate(350px)  rotate(0deg);
@@ -79,7 +79,7 @@
     }
 
 }
-
+ /*button moves left and right*/
 .back-and-forth {
     animation: back-and-forth .5s infinite linear;
 }

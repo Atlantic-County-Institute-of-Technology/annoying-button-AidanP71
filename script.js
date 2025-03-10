@@ -7,7 +7,7 @@ let button3 = null;
 let clicks = 0;
 
 button1.addEventListener("click", annoy);
-
+// plays a sound for every click
 function annoy() {
     let quack = new Audio('assets/quack.mp3');
     quack.play()
@@ -83,6 +83,7 @@ function annoy() {
         text.innerHTML = "Fine, try and click me now."
         button1.classList.add("rotate");
     }
+    // removes rotate classlist but adds to buttons
     else if (clicks == 24) {
         text.innerHTML = "Ok! How about now?"
         button1.classList.remove("rotate"); 
@@ -119,6 +120,7 @@ function annoy() {
     else if (clicks == 29) {
         text.innerHTML = "You acutally thought"
     }
+    // loops clicks back to the first click
     else if (clicks == 30) {
         text.innerHTML = "The game is NEVER over"
         clicks = 0
